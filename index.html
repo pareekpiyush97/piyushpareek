@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piyush Pareek — AI & Automation Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D1117;
+  --navy-2:#131A24;
+  --navy-3:#1C2A3A;
+  --navy-4:#243348;
+  --violet:#7C3AED;
+  --violet-light:#A78BFA;
+  --violet-faint:rgba(124,58,237,0.08);
+  --violet-border:rgba(124,58,237,0.25);
+  --ivory:#F7F4EF;
+  --ivory-2:#EDE9E1;
+  --text:#F0EDE8;
+  --text-muted:#8B96A8;
+  --text-dim:#5A6478;
+  --border:rgba(255,255,255,0.07);
+  --border-v:rgba(124,58,237,0.3);
+  --r:10px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--text);line-height:1.7;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 3rem;
+  background:rgba(13,17,23,0.75);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-brand{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.01em;color:var(--text)}
+.nav-brand span{color:var(--violet-light)}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-hire{
+  background:var(--violet);color:#fff;
+  padding:0.5rem 1.3rem;border-radius:100px;
+  font-size:0.85rem;font-weight:500;text-decoration:none;
+  letter-spacing:0.02em;transition:background 0.2s,transform 0.15s;
+}
+.nav-hire:hover{background:#6D28D9;transform:translateY(-1px)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:0.3s}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:4rem;
+  padding:9rem 3rem 5rem;max-width:1200px;margin:0 auto;
+}
+.hero-left{}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--violet-light);margin-bottom:1.8rem;
+}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--violet-light)}
+.hero h1{
+  font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,5vw,4.5rem);
+  font-weight:800;line-height:1.08;letter-spacing:-0.02em;
+  margin-bottom:1.2rem;
+}
+.hero h1 em{font-style:normal;color:var(--violet-light)}
+.hero-role{
+  font-size:1rem;color:var(--text-muted);
+  font-weight:300;letter-spacing:0.06em;text-transform:uppercase;
+  margin-bottom:1.6rem;
+}
+.hero-desc{
+  font-size:1.05rem;color:var(--text-muted);line-height:1.85;
+  max-width:440px;margin-bottom:2.5rem;font-weight:300;
+}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-v{
+  background:var(--violet);color:#fff;
+  padding:0.8rem 1.8rem;border-radius:100px;
+  font-size:0.9rem;font-weight:500;text-decoration:none;
+  transition:background 0.2s,transform 0.15s;
+}
+.btn-v:hover{background:#6D28D9;transform:translateY(-2px)}
+.btn-ghost{
+  background:transparent;color:var(--text);
+  padding:0.8rem 1.8rem;border-radius:100px;
+  border:1px solid var(--border-v);
+  font-size:0.9rem;font-weight:400;text-decoration:none;
+  transition:border-color 0.2s,color 0.2s,transform 0.15s;
+}
+.btn-ghost:hover{border-color:var(--violet-light);color:var(--violet-light);transform:translateY(-2px)}
+
+/* hero right — visual card */
+.hero-visual{
+  display:flex;flex-direction:column;gap:1rem;
+  animation:slideIn 0.8s ease 0.3s both;
+}
+@keyframes slideIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+.v-card{
+  background:var(--navy-2);border:1px solid var(--border);
+  border-radius:14px;padding:1.4rem 1.6rem;
+}
+.v-card.accent{border-color:var(--border-v);background:var(--violet-faint)}
+.v-card-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-dim);margin-bottom:0.6rem}
+.v-card-val{font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:700;color:var(--text)}
+.v-card-val span{color:var(--violet-light)}
+.v-tag-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.8rem}
+.v-tag{
+  background:rgba(255,255,255,0.05);border:1px solid var(--border);
+  color:var(--text-muted);padding:0.3rem 0.8rem;border-radius:100px;
+  font-size:0.75rem;font-weight:400;
+}
+.v-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+/* ── SECTIONS ── */
+.sec{padding:6rem 3rem;max-width:1200px;margin:0 auto}
+.sec-full{padding:6rem 3rem;background:var(--navy-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.sec-full-inner{max-width:1200px;margin:0 auto}
+.sec-eye{font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--violet-light);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem}
+.sec-eye::before{content:'';width:24px;height:1px;background:var(--violet-light)}
+.sec-h{font-family:'Poppins',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;margin-bottom:0.8rem}
+.sec-sub{color:var(--text-muted);font-size:1rem;font-weight:300;max-width:520px}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:3rem}
+.sk{
+  background:var(--navy-2);padding:2rem;
+  transition:background 0.2s;
+}
+.sk:hover{background:var(--navy-3)}
+.sk-num{font-family:'Poppins',sans-serif;font-size:0.7rem;font-weight:700;color:var(--violet-light);letter-spacing:0.1em;margin-bottom:1rem}
+.sk h3{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.5rem;color:var(--text)}
+.sk p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;font-weight:300}
+
+/* ── PROJECTS ── */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;margin-top:3rem}
+.proj{
+  background:var(--navy-2);border:1px solid var(--border);
+  border-radius:14px;padding:2rem;
+  display:flex;flex-direction:column;gap:1rem;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.proj:hover{border-color:var(--border-v);transform:translateY(-3px)}
+.proj-cat{
+  width:fit-content;background:var(--violet-faint);border:1px solid var(--border-v);
+  color:var(--violet-light);padding:0.25rem 0.75rem;border-radius:100px;
+  font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+}
+.proj h3{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:var(--text)}
+.proj p{font-size:0.875rem;color:var(--text-muted);line-height:1.65;font-weight:300;flex:1}
+.proj-a{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  color:var(--violet-light);font-size:0.85rem;font-weight:500;text-decoration:none;
+  transition:gap 0.2s;
+}
+.proj-a:hover{gap:0.7rem}
+.proj-a::after{content:'↗';font-size:0.8rem}
+
+/* AI grid */
+.ai-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+.ai-c{
+  background:var(--navy-3);border:1px solid var(--border);
+  border-radius:12px;padding:1.4rem;
+  border-left:2px solid var(--violet);
+  border-radius:0 12px 12px 0;
+  transition:border-left-color 0.2s;
+}
+.ai-c:hover{border-left-color:var(--violet-light)}
+.ai-c h3{font-family:'Poppins',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.4rem;color:var(--text)}
+.ai-c p{font-size:0.82rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+
+/* ── CONTACT ── */
+.contact-box{
+  background:var(--navy-2);border:1px solid var(--border);
+  border-radius:20px;padding:4rem;max-width:820px;margin:3rem auto 0;text-align:center;
+}
+.contact-box h2{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:0.8rem}
+.contact-box p{color:var(--text-muted);font-size:1rem;font-weight:300;max-width:440px;margin:0 auto 2.5rem}
+.c-links{display:flex;justify-content:center;flex-wrap:wrap;gap:0.8rem}
+.c-link{
+  display:flex;align-items:center;gap:0.6rem;
+  background:var(--navy-3);border:1px solid var(--border);
+  color:var(--text-muted);padding:0.7rem 1.4rem;border-radius:100px;
+  text-decoration:none;font-size:0.88rem;font-weight:400;
+  transition:border-color 0.2s,color 0.2s,transform 0.15s;
+}
+.c-link:hover{border-color:var(--violet-light);color:var(--violet-light);transform:translateY(-2px)}
+.c-link svg{width:16px;height:16px;flex-shrink:0}
+
+/* ── FOOTER ── */
+footer{text-align:center;padding:2.5rem;border-top:1px solid var(--border);color:var(--text-dim);font-size:0.82rem}
+footer b{color:var(--violet-light);font-weight:500}
+
+/* ── MOBILE ── */
+@media(max-width:860px){
+  nav{padding:1rem 1.5rem}
+  .nav-links,.nav-hire{display:none}
+  .nav-links{position:fixed;top:58px;left:0;right:0;background:var(--navy-2);flex-direction:column;gap:0;padding:0.5rem 0;border-bottom:1px solid var(--border);z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:0.9rem 2rem}
+  .ham{display:flex}
+  .hero{grid-template-columns:1fr;padding:7rem 1.5rem 4rem;gap:3rem}
+  .hero-visual{display:none}
+  .sec,.sec-full{padding:4rem 1.5rem}
+  .contact-box{padding:2rem 1.5rem}
+}
+
+/* ── FADE IN ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-left>*{animation:fadeUp 0.6s ease both}
+.hero-eyebrow{animation-delay:0s}
+.hero h1{animation-delay:0.1s}
+.hero-role{animation-delay:0.18s}
+.hero-desc{animation-delay:0.25s}
+.hero-btns{animation-delay:0.33s}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Piyush<span>.</span></div>
+  <div class="nav-links" id="nl">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-hire" href="https://wa.me/918949498980" target="_blank">Hire me</a>
+  <button class="ham" onclick="document.getElementById('nl').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Available for projects</div>
+    <h1>Building the<br>web with <em>AI</em><br>at the core.</h1>
+    <p class="hero-role">AI & Automation Developer</p>
+    <p class="hero-desc">I design and build websites, AI-powered workflows, and business automation systems that help companies grow faster and operate smarter.</p>
+    <div class="hero-btns">
+      <a class="btn-v" href="#projects">See my work</a>
+      <a class="btn-ghost" href="#contact">Let's talk</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="v-row">
+      <div class="v-card accent">
+        <div class="v-card-label">Live projects</div>
+        <div class="v-card-val"><span>4+</span></div>
+      </div>
+      <div class="v-card">
+        <div class="v-card-label">Focus area</div>
+        <div class="v-card-val" style="font-size:1rem;padding-top:0.25rem">AI-first<br>builds</div>
+      </div>
+    </div>
+    <div class="v-card">
+      <div class="v-card-label">Tech stack</div>
+      <div class="v-tag-row">
+        <span class="v-tag">HTML5</span>
+        <span class="v-tag">CSS3</span>
+        <span class="v-tag">JavaScript</span>
+        <span class="v-tag">AI APIs</span>
+        <span class="v-tag">Vercel</span>
+        <span class="v-tag">GitHub</span>
+        <span class="v-tag">Automation</span>
+        <span class="v-tag">WhatsApp</span>
+      </div>
+    </div>
+    <div class="v-card">
+      <div class="v-card-label">Currently building</div>
+      <div style="font-size:0.9rem;color:var(--text);font-weight:400;margin-top:0.3rem">AI-powered business assistant + local business digital ecosystems</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="sec-eye">About me</div>
+  <h2 class="sec-h">Digital solutions,<br>driven by intelligence</h2>
+  <p class="sec-sub">I'm Piyush Pareek — a Digital Solutions Developer who combines clean UI/UX, modern frontend technologies, automation tools, cloud deployment, and AI integration to create products that help businesses grow. Every project I build focuses on speed, scalability, and measurable business value.</p>
+</section>
+
+<!-- SKILLS -->
+<div class="sec-full" id="skills">
+  <div class="sec-full-inner">
+    <div class="sec-eye">What I do</div>
+    <h2 class="sec-h">Core skills and services</h2>
+    <div class="skills-grid">
+      <div class="sk"><div class="sk-num">01</div><h3>Website development</h3><p>Responsive, fast-loading sites built with HTML5, CSS3 and JavaScript. Mobile-first, SEO-ready.</p></div>
+      <div class="sk"><div class="sk-num">02</div><h3>AI integration</h3><p>Embedding AI into websites and tools — chatbots, smart triggers, and intelligent workflows.</p></div>
+      <div class="sk"><div class="sk-num">03</div><h3>Business automation</h3><p>Reducing manual work through smart automation — lead capture, WhatsApp, customer funnels.</p></div>
+      <div class="sk"><div class="sk-num">04</div><h3>Cloud deployment</h3><p>Fast publishing pipelines using GitHub and Vercel. Your site goes live in minutes.</p></div>
+      <div class="sk"><div class="sk-num">05</div><h3>UI / UX design</h3><p>Clean, premium interfaces designed around real user journeys that convert visitors.</p></div>
+      <div class="sk"><div class="sk-num">06</div><h3>WhatsApp and lead systems</h3><p>Click-to-chat, lead capture forms, and acquisition funnels that grow your customer base.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="sec" id="projects">
+  <div class="sec-eye">Portfolio</div>
+  <h2 class="sec-h">Live projects</h2>
+  <p class="sec-sub">A selection of websites and digital products built and deployed for real clients.</p>
+  <div class="proj-grid">
+    <div class="proj">
+      <span class="proj-cat">Business</span>
+      <h3>WebSol — Business landing platform</h3>
+      <p>Modern business website with premium UI, responsive layouts, service presentation, and customer engagement design.</p>
+      <a class="proj-a" href="https://sushantdhar77-cyber.github.io/websol/" target="_blank">View live demo</a>
+    </div>
+    <div class="proj">
+      <span class="proj-cat">Education</span>
+      <h3>Best English Classes</h3>
+      <p>Complete educational institute website with course info, admission details, responsive design, and professional branding.</p>
+      <a class="proj-a" href="https://sushantdhar77-cyber.github.io/bestenglishclasess/" target="_blank">View live demo</a>
+    </div>
+    <div class="proj">
+      <span class="proj-cat">Coaching</span>
+      <h3>Shree Ram Classes</h3>
+      <p>Coaching institute site with modern UI components, structured navigation, and mobile-first responsiveness.</p>
+      <a class="proj-a" href="https://sushantdhar77-cyber.github.io/shreeramclasses/" target="_blank">View live demo</a>
+    </div>
+    <div class="proj">
+      <span class="proj-cat">Showcase</span>
+      <h3>DemoWebIn</h3>
+      <p>A showcase demonstrating responsive web development, animations, clean layouts, and modern frontend practices.</p>
+      <a class="proj-a" href="https://sushantdhar77-cyber.github.io/demowebin/" target="_blank">View live demo</a>
+    </div>
+  </div>
+
+  <div style="margin-top:5rem">
+    <div class="sec-eye">In progress</div>
+    <h2 class="sec-h" style="font-size:1.8rem">AI and automation projects</h2>
+    <div class="ai-grid">
+      <div class="ai-c"><h3>AI Business Assistant</h3><p>An AI-powered assistant to automate workflows, manage tasks, and boost productivity.</p></div>
+      <div class="ai-c"><h3>Local Business Transformation</h3><p>Full digital ecosystems — websites, ordering systems, WhatsApp funnels — for local businesses.</p></div>
+      <div class="ai-c"><h3>Smart Deployment Workflow</h3><p>Scalable GitHub and Vercel pipelines for seamless, one-click publishing.</p></div>
+      <div class="ai-c"><h3>AI Productivity Systems</h3><p>Intelligent workflows that combine AI tools with automation to cut manual work significantly.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="sec-full" id="contact">
+  <div class="sec-full-inner">
+    <div class="sec-eye" style="justify-content:center">Let's work together</div>
+    <div class="contact-box">
+      <h2>Ready to build<br>something great?</h2>
+      <p>Whether you need a website, an AI integration, or a full business automation system — reach out through any channel below.</p>
+      <div class="c-links">
+        <a class="c-link" href="https://wa.me/918949498980" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.978 0C5.376 0 0 5.373 0 11.97c0 2.112.554 4.094 1.523 5.815L.064 23.996l6.374-1.65C8.04 23.41 9.978 24 11.978 24 18.58 24 24 18.627 24 12.03 24 5.373 18.58 0 11.978 0zm.022 22c-1.81 0-3.507-.487-4.971-1.338l-.356-.212-3.78.979 1.004-3.668-.231-.375C2.6 15.788 2 13.956 2 12c0-5.514 4.487-10 10-10 5.514 0 10 4.486 10 10 0 5.513-4.486 10-10 10z"/></svg>
+          WhatsApp
+        </a>
+        <a class="c-link" href="mailto:pareekpiyush97@gmail.com" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Gmail
+        </a>
+        <a class="c-link" href="https://x.com/pareekpiyush97" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Twitter / X
+        </a>
+        <a class="c-link" href="https://www.linkedin.com/in/piyush-pareek49" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 <b>Piyush Pareek</b> · AI and Automation Developer · Made with intelligence</p>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}}),{threshold:0.1});
+document.querySelectorAll('.sk,.proj,.ai-c,.contact-box').forEach(el=>{el.style.cssText+='opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.2s,border-left-color 0.2s';io.observe(el)});
+</script>
+</body>
+</html>
