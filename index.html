@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Piyush Pareek — AI &amp; Automation Developer | Corporate Web Solutions</title>
-<meta name="description" content="Piyush Pareek delivers enterprise-grade websites, AI-powered workflows and WhatsApp lead systems. 50+ live client projects. Based in India, serving clients worldwide.">
-<meta name="keywords" content="web developer, AI automation, WhatsApp business automation, website development India, business automation developer, Piyush Pareek">
+<title>Piyush Pareek — Premium Websites for India's Next Brands | Web Design, SEO &amp; Automation</title>
+<meta name="description" content="Premium websites that help the next Indian brand build trust and attract more customers. Web design, redesign, landing pages, SEO and WhatsApp automation. 50+ live client projects. Based in Bikaner, India — working worldwide.">
+<meta name="keywords" content="web designer for Indian brands, website design India, website redesign, landing pages, SEO optimization, WhatsApp automation, AI automation, Piyush Pareek">
 <meta name="author" content="Piyush Pareek">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0B2545">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Piyush Pareek — AI &amp; Automation Developer">
-<meta property="og:description" content="Enterprise-grade websites, AI workflows and WhatsApp lead systems that drive measurable business growth.">
+<meta property="og:title" content="Piyush Pareek — Premium Websites for India's Next Brands">
+<meta property="og:description" content="Websites that build trust and attract customers for hotels, clinics, institutes and India's next brands. 50+ live client projects.">
 <meta property="og:image" content="https://pareekpiyush97.github.io/piyushpareek/image.jpeg">
 <meta property="og:url" content="https://pareekpiyush97.github.io/piyushpareek/">
 <meta name="twitter:card" content="summary">
@@ -47,6 +47,14 @@ a{color:var(--blue)}
 .skip-link:focus{left:0}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
 /* ===== Header / Nav ===== */
 header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
@@ -55,29 +63,31 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdr
 .brand-text{line-height:1.15}
 .brand-text strong{display:block;color:var(--navy);font-size:16px;font-weight:700}
 .brand-text span{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
 .nav-links a{color:var(--slate);text-decoration:none;font-size:14.5px;font-weight:500;padding:6px 2px;border-bottom:2px solid transparent}
 .nav-links a:hover{color:var(--navy);border-bottom-color:var(--gold)}
-.btn{display:inline-block;padding:12px 26px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:all .18s ease}
+.btn{display:inline-block;padding:13px 28px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:all .18s ease}
 .btn-primary{background:var(--blue);color:#fff}
 .btn-primary:hover{background:#1E40AF;box-shadow:var(--shadow)}
-.btn-outline{border-color:var(--navy);color:var(--navy);background:transparent}
-.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-gold{background:var(--gold);color:var(--navy);font-weight:700}
+.btn-gold:hover{background:#B8921F;box-shadow:var(--shadow)}
 .btn-ghost-light{border-color:rgba(255,255,255,.4);color:#fff;background:transparent}
 .btn-ghost-light:hover{background:rgba(255,255,255,.12)}
 .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:20px;color:var(--navy);cursor:pointer}
 
 /* ===== Hero ===== */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:88px 0 0}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-bottom:80px}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:92px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-bottom:84px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 .eyebrow::before{content:"";width:32px;height:2px;background:var(--gold)}
 .hero h1{color:#fff;font-size:clamp(34px,4.6vw,52px);margin-bottom:20px}
 .hero h1 em{color:var(--gold);font-style:normal}
-.hero p.lede{color:#C7D2E4;font-size:18px;max-width:520px;margin-bottom:32px}
+.hero p.lede{color:#C7D2E4;font-size:18px;max-width:540px;margin-bottom:32px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-trust{margin-top:26px;font-size:13.5px;color:#9FB3D1;display:flex;gap:18px;flex-wrap:wrap}
+.hero-trust span::before{content:"✓ ";color:var(--gold)}
 .hero-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden}
-.hero-card img{width:100%;height:300px;object-fit:cover}
+.hero-card img{width:100%;height:auto}
 .hero-card-body{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .hero-card-body strong{color:var(--navy);font-size:15px}
 .hero-card-body span{color:var(--muted);font-size:13px}
@@ -92,7 +102,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdr
 
 /* ===== Sections ===== */
 section{padding:84px 0}
-.section-head{max-width:640px;margin-bottom:52px}
+.section-head{max-width:660px;margin-bottom:52px}
 .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
 .kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;display:block}
 .section-head h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:14px}
@@ -105,6 +115,7 @@ section{padding:84px 0}
 .about-points{list-style:none;display:grid;gap:14px;margin-top:8px}
 .about-points li{display:flex;gap:12px;align-items:flex-start;color:var(--ink);font-weight:500;font-size:15.5px}
 .about-points li::before{content:"✓";flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;display:grid;place-items:center;margin-top:1px}
+.loc-line{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14.5px;margin-top:22px}
 .stack-panel{background:var(--navy);border-radius:var(--radius);padding:36px;color:#fff;box-shadow:var(--shadow-lg)}
 .stack-panel h3{color:#fff;font-size:20px;margin-bottom:18px}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
@@ -112,7 +123,7 @@ section{padding:84px 0}
 
 /* ===== Services ===== */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.svc{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:#fff;transition:all .2s ease;position:relative}
+.svc{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:#fff;transition:all .2s ease}
 .svc:hover{box-shadow:var(--shadow-lg);border-color:var(--navy);transform:translateY(-3px)}
 .svc .num{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.1em}
 .svc h3{font-size:19px;margin:12px 0 10px}
@@ -139,28 +150,31 @@ section{padding:84px 0}
 .link-code{border:1px solid var(--line);color:var(--slate)}
 .link-code:hover{border-color:var(--navy);color:var(--navy)}
 
+/* ===== Why choose me ===== */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why{background:var(--bg-soft);border-radius:var(--radius);padding:28px 26px;border-top:3px solid var(--gold)}
+.why .ico{font-size:26px;margin-bottom:14px}
+.why h3{font-size:18px;margin-bottom:8px}
+.why p{color:var(--slate);font-size:14.5px}
+
 /* ===== R&D strip ===== */
-.rnd{background:#fff}
+.rnd{background:var(--bg-soft)}
 .rnd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.rnd-card{border-left:3px solid var(--gold);background:var(--bg-soft);border-radius:0 var(--radius) var(--radius) 0;padding:24px 22px}
+.rnd-card{border-left:3px solid var(--gold);background:#fff;border-radius:0 var(--radius) var(--radius) 0;padding:24px 22px;box-shadow:var(--shadow)}
 .rnd-card h3{font-size:16.5px;margin-bottom:8px}
 .rnd-card p{font-size:14px;color:var(--slate)}
 .rnd-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px}
 
 /* ===== Process ===== */
 .process{background:var(--navy);color:#fff}
-.process .section-head h2,.process .section-head{color:#fff}
+.process .section-head h2{color:#fff}
 .process .section-head p{color:#B9C6DC}
 .process .kicker{color:var(--gold)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px 24px}
-.step .num{font-family:'Source Serif 4',serif;font-size:34px;color:var(--gold);display:block;margin-bottom:12px}
-.step h3{color:#fff;font-size:18px;margin-bottom:8px}
-.step p{color:#B9C6DC;font-size:14.3px}
-.step .when{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:var(--gold);border:1px solid rgba(201,162,39,.4);padding:3px 11px;border-radius:99px}
-.assure{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
-.assure div{font-size:14px;color:#DCE5F1}
-.assure strong{display:block;color:#fff;margin-bottom:4px;font-size:14.5px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 22px}
+.step .num{font-family:'Source Serif 4',serif;font-size:32px;color:var(--gold);display:block;margin-bottom:10px}
+.step h3{color:#fff;font-size:17.5px;margin-bottom:8px}
+.step p{color:#B9C6DC;font-size:13.8px}
 
 /* ===== Contact ===== */
 .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
@@ -181,21 +195,30 @@ textarea{resize:vertical;min-height:96px}
 .channel span{color:var(--muted);font-size:13.5px}
 
 /* ===== Footer ===== */
-footer{background:var(--navy);color:#94A6C1;padding:44px 0 32px;font-size:14px}
-.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer a{color:#CBD5E1;text-decoration:none;margin-left:22px}
-footer a:hover{color:#fff;text-decoration:underline}
+footer{background:var(--navy);color:#94A6C1;padding:56px 0 28px;font-size:14px}
+.foot-cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-cols h4{color:#fff;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.foot-cols ul{list-style:none;display:grid;gap:10px}
+.foot-cols a{color:#B9C6DC;text-decoration:none}
+.foot-cols a:hover{color:#fff;text-decoration:underline}
+.foot-about p{margin-top:14px;font-size:13.5px;line-height:1.7;max-width:280px}
+.foot-social{display:flex;gap:12px;margin-top:16px}
+.foot-social a{width:38px;height:38px;border:1px solid rgba(255,255,255,.25);border-radius:8px;display:grid;place-items:center;color:#DBEAFE;text-decoration:none;font-size:15px;font-weight:700}
+.foot-social a:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-top:24px;font-size:13px}
 footer .brand-mark{background:#fff;color:var(--navy)}
 
 /* ===== Responsive ===== */
 @media(max-width:960px){
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-  .services-grid,.proj-grid{grid-template-columns:repeat(2,1fr)}
-  .steps,.rnd-grid,.assure{grid-template-columns:repeat(2,1fr)}
+  .services-grid,.proj-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .rnd-grid{grid-template-columns:repeat(2,1fr)}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-cols{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:640px){
-  .services-grid,.proj-grid,.steps,.rnd-grid,.assure,.stats-grid{grid-template-columns:1fr}
+  .services-grid,.proj-grid,.why-grid,.steps,.rnd-grid,.stats-grid,.foot-cols{grid-template-columns:1fr}
   .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:8px 0}
   .nav-links.open{display:flex}
   .nav-links li{width:100%}
@@ -214,18 +237,19 @@ footer .brand-mark{background:#fff;color:var(--navy)}
   <div class="container nav">
     <a class="brand" href="#top" aria-label="Piyush Pareek — home">
       <span class="brand-mark" aria-hidden="true">PP</span>
-      <span class="brand-text"><strong>Piyush Pareek</strong><span>AI &amp; Automation Developer</span></span>
+      <span class="brand-text"><strong>Piyush Pareek</strong><span>Web Design &amp; Automation</span></span>
     </a>
     <nav aria-label="Primary">
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#why">Why Me</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary" href="https://wa.me/918949498980?text=Hi%20Piyush%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." rel="noopener">Start a project</a>
+    <a class="btn btn-primary" href="https://wa.me/918949498980?text=Hi%20Piyush%2C%20I%27d%20like%20to%20book%20a%20free%20consultation%20for%20my%20business%20website." rel="noopener">Book a Free Consultation</a>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
   </div>
 </header>
@@ -236,18 +260,23 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 <section class="hero" id="top" aria-label="Introduction">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">Digital Solutions · India → Worldwide</span>
-      <h1>Enterprise-grade websites, <em>powered by AI</em> and automation.</h1>
-      <p class="lede">I design and build high-performance websites, AI-driven workflows and WhatsApp lead systems that help businesses grow faster and operate smarter — delivered in days, not months.</p>
+      <span class="eyebrow">Web Design · SEO · Automation for India's Next Brands</span>
+      <h1>Premium websites that help the next Indian brand <em>build trust</em> and attract more customers.</h1>
+      <p class="lede">I'm Piyush Pareek. I design fast, mobile-first websites with built-in lead capture, SEO and WhatsApp automation — so hotels, clinics, institutes and rising Indian brands turn visitors into enquiries.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#portfolio">View portfolio</a>
-        <a class="btn btn-ghost-light" href="#contact">Request a consultation</a>
+        <a class="btn btn-gold" href="https://wa.me/918949498980?text=Hi%20Piyush%2C%20I%27d%20like%20to%20book%20a%20free%20consultation%20for%20my%20business%20website." rel="noopener">Book a Free Consultation</a>
+        <a class="btn btn-ghost-light" href="#portfolio">View My Work</a>
+      </div>
+      <div class="hero-trust">
+        <span>Live in days, not months</span>
+        <span>Mobile-first, always</span>
+        <span>Replies within 24 hours</span>
       </div>
     </div>
     <div class="hero-card">
-      <img src="https://pareekpiyush97.github.io/piyushpareek/image.jpeg" alt="Piyush Pareek, AI and Automation Developer" loading="eager">
+      <img src="https://pareekpiyush97.github.io/piyushpareek/image.jpeg" alt="Piyush Pareek, web designer and automation developer" loading="eager">
       <div class="hero-card-body">
-        <div><strong>Piyush Pareek</strong><br><span>AI &amp; Automation Developer</span></div>
+        <div><strong>Piyush Pareek</strong><br><span>Bikaner, India · Working worldwide</span></div>
         <span class="badge">50+ live client projects</span>
       </div>
     </div>
@@ -269,22 +298,24 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="container about-grid">
-    <div class="about-copy">
+    <div class="about-copy reveal">
       <span class="kicker">About</span>
-      <h2 style="font-size:clamp(28px,3.4vw,38px);margin-bottom:18px">Digital solutions, driven by intelligence</h2>
-      <p>I'm Piyush Pareek — a Digital Solutions Developer combining clean UI/UX, modern frontend engineering, automation tooling, cloud deployment and AI integration to build products that deliver measurable business value.</p>
+      <h2 style="font-size:clamp(28px,3.4vw,38px);margin-bottom:18px">Your website should win you customers — not just exist</h2>
+      <p>I'm Piyush Pareek — a web designer and automation developer who builds websites around one goal: making it easy for your customers to find you, trust you, and contact you.</p>
       <ul class="about-points">
-        <li>Every project engineered for speed, scalability and conversion</li>
+        <li>Every project engineered for speed, trust and conversion</li>
         <li>Preview links from day one — full transparency throughout the build</li>
         <li>Post-launch support included: launch is the start, not the end</li>
       </ul>
+      <p class="loc-line">📍 Based in Bikaner, Rajasthan, India — working with businesses worldwide</p>
     </div>
-    <div class="stack-panel">
+    <div class="stack-panel reveal">
       <h3>Technology stack</h3>
       <div class="chips">
         <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
+        <span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span>
         <span class="chip">AI APIs</span><span class="chip">Vercel</span><span class="chip">GitHub</span>
-        <span class="chip">Automation</span><span class="chip">WhatsApp Business</span><span class="chip">SEO</span>
+        <span class="chip">WhatsApp Business</span><span class="chip">SEO</span>
       </div>
     </div>
   </div>
@@ -293,18 +324,18 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
-    <div class="section-head center">
-      <span class="kicker">What I do</span>
-      <h2>Core services</h2>
-      <p>End-to-end capability — from first pixel to deployed, automated, lead-generating product.</p>
+    <div class="section-head center reveal">
+      <span class="kicker">Services</span>
+      <h2>Everything your business website needs</h2>
+      <p>From first pixel to deployed, automated, lead-generating product — one person, end to end.</p>
     </div>
     <div class="services-grid">
-      <div class="svc"><span class="num">01</span><h3>Website development</h3><p>Responsive, fast-loading sites built with HTML5, CSS3 and JavaScript. Mobile-first and SEO-ready from the first commit.</p></div>
-      <div class="svc"><span class="num">02</span><h3>AI integration</h3><p>Embedding AI into websites and tools — chatbots, smart triggers, and intelligent workflows that work while you sleep.</p></div>
-      <div class="svc"><span class="num">03</span><h3>Business automation</h3><p>Reducing manual work through smart automation — lead capture, WhatsApp funnels and customer journeys.</p></div>
-      <div class="svc"><span class="num">04</span><h3>Cloud deployment</h3><p>Fast publishing pipelines using GitHub and Vercel. Your site goes live in minutes, not weeks.</p></div>
-      <div class="svc"><span class="num">05</span><h3>UI / UX design</h3><p>Clean, premium interfaces designed around real user journeys — built to convert visitors into customers.</p></div>
-      <div class="svc"><span class="num">06</span><h3>WhatsApp &amp; lead systems</h3><p>Click-to-chat, lead capture forms, and acquisition funnels that grow your customer base on autopilot.</p></div>
+      <div class="svc reveal"><span class="num">01</span><h3>Website Design</h3><p>Custom, mobile-first websites designed around your brand and your customers' journey — built to convert visitors into enquiries.</p></div>
+      <div class="svc reveal"><span class="num">02</span><h3>Website Redesign</h3><p>Outdated site costing you customers? I rebuild it modern, fast and trustworthy — without losing your existing SEO.</p></div>
+      <div class="svc reveal"><span class="num">03</span><h3>Landing Pages</h3><p>High-converting single pages for campaigns, offers and ads — with lead capture wired straight to your WhatsApp.</p></div>
+      <div class="svc reveal"><span class="num">04</span><h3>SEO Optimization</h3><p>On-page SEO, meta and social-preview cards, Google Maps integration and fast load times — so your customers find you first.</p></div>
+      <div class="svc reveal"><span class="num">05</span><h3>Website Maintenance</h3><p>Updates, content changes, monitoring and fixes — your site stays fast, secure and current while you run your business.</p></div>
+      <div class="svc reveal"><span class="num">06</span><h3>AI &amp; WhatsApp Automation</h3><p>Chatbots, smart lead funnels and automated follow-ups that capture and qualify customers around the clock.</p></div>
     </div>
   </div>
 </section>
@@ -312,90 +343,108 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 <!-- PORTFOLIO -->
 <section class="portfolio" id="portfolio">
   <div class="container">
-    <div class="section-head center">
-      <span class="kicker">Portfolio</span>
-      <h2>Live client projects</h2>
-      <p>Websites built and deployed for real businesses — every link below is live right now.</p>
+    <div class="section-head center reveal">
+      <span class="kicker">Featured Projects</span>
+      <h2>Live client websites</h2>
+      <p>Built and deployed for real businesses — every link below is live right now. Click through and see for yourself.</p>
     </div>
     <div class="proj-grid">
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-top"><span class="proj-cat">IT Institute</span><span class="live-pill">Live</span></div>
         <div class="proj-body">
           <h3>WebSol Institute — Bikaner</h3>
           <p>Complete website for Bikaner's IT training institute: course catalogue, student testimonials, enquiry form, click-to-call and WhatsApp funnel, Google Maps integration.</p>
           <div class="tags"><span class="tag">Lead form</span><span class="tag">WhatsApp funnel</span><span class="tag">SEO</span><span class="tag">Maps</span></div>
           <div class="proj-links">
-            <a class="link-live" href="https://sushantdhar77-cyber.github.io/websol/" rel="noopener">Visit site</a>
-            <a class="link-code" href="https://github.com/pareekpiyush97/websol" rel="noopener">Source</a>
+            <a class="link-live" href="https://sushantdhar77-cyber.github.io/websol/" rel="noopener">Live demo</a>
+            <a class="link-code" href="https://github.com/pareekpiyush97/websol" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-top"><span class="proj-cat">Education</span><span class="live-pill">Live</span></div>
         <div class="proj-body">
           <h3>Best English Classes — Bikaner</h3>
           <p>English-speaking institute site with course tracks (Spoken English, IELTS, Personality Development), before/after student journeys, and callback request form.</p>
           <div class="tags"><span class="tag">6 course tracks</span><span class="tag">Callback form</span><span class="tag">Mobile-first</span></div>
           <div class="proj-links">
-            <a class="link-live" href="https://sushantdhar77-cyber.github.io/bestenglishclasess/" rel="noopener">Visit site</a>
-            <a class="link-code" href="https://github.com/pareekpiyush97/thebestenglishclasses" rel="noopener">Source</a>
+            <a class="link-live" href="https://sushantdhar77-cyber.github.io/bestenglishclasess/" rel="noopener">Live demo</a>
+            <a class="link-code" href="https://github.com/pareekpiyush97/thebestenglishclasses" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-top"><span class="proj-cat">Coaching</span><span class="live-pill">Live</span></div>
         <div class="proj-body">
           <h3>Shree Ram Classes — Bikaner</h3>
           <p>RAS &amp; RPSC coaching institute site with exam-wise course tracks, achievers wall, faculty section, and enquiry system — built for Rajasthan govt-exam aspirants.</p>
           <div class="tags"><span class="tag">Achievers wall</span><span class="tag">6 exam tracks</span><span class="tag">Enquiry form</span></div>
           <div class="proj-links">
-            <a class="link-live" href="https://sushantdhar77-cyber.github.io/shreeramclasses/" rel="noopener">Visit site</a>
+            <a class="link-live" href="https://sushantdhar77-cyber.github.io/shreeramclasses/" rel="noopener">Live demo</a>
           </div>
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-top"><span class="proj-cat">Healthcare</span><span class="live-pill">Live</span></div>
         <div class="proj-body">
           <h3>Nath Homeopathy — Bikaner</h3>
           <p>Multi-page clinic website for Dr. Manali Vyas: online appointment booking, weekly webinar registration, patient testimonials, Google Maps, and full SEO with social-preview cards.</p>
           <div class="tags"><span class="tag">5 pages</span><span class="tag">Booking system</span><span class="tag">Webinar funnel</span><span class="tag">SEO + OG</span></div>
           <div class="proj-links">
-            <a class="link-live" href="https://pareekpiyush97.github.io/Nath-Homiopathy/" rel="noopener">Visit site</a>
-            <a class="link-code" href="https://github.com/pareekpiyush97/Nath-Homiopathy" rel="noopener">Source</a>
+            <a class="link-live" href="https://pareekpiyush97.github.io/Nath-Homiopathy/" rel="noopener">Live demo</a>
+            <a class="link-code" href="https://github.com/pareekpiyush97/Nath-Homiopathy" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-top"><span class="proj-cat">Dental</span><span class="live-pill">Live</span></div>
         <div class="proj-body">
           <h3>Dr Ujjwal's Dental Clinic — Bikaner</h3>
           <p>Complete dental clinic site with 30-second slot-booking form that confirms via WhatsApp, treatment catalogue, smile-story case studies, and 4.9★ Google-review integration.</p>
           <div class="tags"><span class="tag">Slot booking</span><span class="tag">WhatsApp confirm</span><span class="tag">Case studies</span><span class="tag">Reviews</span></div>
           <div class="proj-links">
-            <a class="link-live" href="https://pareekpiyush97.github.io/Dental-Clinic-/" rel="noopener">Visit site</a>
-            <a class="link-code" href="https://github.com/pareekpiyush97/Dental-Clinic-" rel="noopener">Source</a>
+            <a class="link-live" href="https://pareekpiyush97.github.io/Dental-Clinic-/" rel="noopener">Live demo</a>
+            <a class="link-code" href="https://github.com/pareekpiyush97/Dental-Clinic-" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
 
-      <article class="proj">
+      <article class="proj reveal">
         <div class="proj-top"><span class="proj-cat">Hospitality</span><span class="live-pill">Live</span></div>
         <div class="proj-body">
           <h3>Laxmi Niwas Palace — Bikaner</h3>
           <p>Multipage website for the heritage palace hotel (Est. 1904): cinematic scroll animations, room and dining showcases, built with a modern component architecture.</p>
           <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Framer Motion</span></div>
           <div class="proj-links">
-            <a class="link-live" href="https://pareekpiyush97.github.io/laxmi-Niwas-Palace/" rel="noopener">Visit site</a>
-            <a class="link-code" href="https://github.com/pareekpiyush97/laxmi-Niwas-Palace" rel="noopener">Source</a>
+            <a class="link-live" href="https://pareekpiyush97.github.io/laxmi-Niwas-Palace/" rel="noopener">Live demo</a>
+            <a class="link-code" href="https://github.com/pareekpiyush97/laxmi-Niwas-Palace" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ME -->
+<section id="why">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">Why Choose Me</span>
+      <h2>What you get when we work together</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="ico" aria-hidden="true">⚡</div><h3>Fast Delivery</h3><p>Your site goes live in days, not months. Clear timelines, no dragging projects.</p></div>
+      <div class="why reveal"><div class="ico" aria-hidden="true">📱</div><h3>Mobile Responsive</h3><p>Most of your customers are on phones. Every build starts mobile-first and works on every screen.</p></div>
+      <div class="why reveal"><div class="ico" aria-hidden="true">🔍</div><h3>SEO Friendly</h3><p>Proper structure, meta tags, fast loading and Maps integration — so Google and your customers find you.</p></div>
+      <div class="why reveal"><div class="ico" aria-hidden="true">🧩</div><h3>Clean Code</h3><p>Semantic, maintainable, lightweight code. No bloated builders — your site stays fast and easy to update.</p></div>
+      <div class="why reveal"><div class="ico" aria-hidden="true">🤝</div><h3>Ongoing Support</h3><p>Launch is the start, not the end. I remain one WhatsApp message away for updates and fixes.</p></div>
+      <div class="why reveal"><div class="ico" aria-hidden="true">💬</div><h3>Direct Communication</h3><p>You talk to the person building your site — no middleman, no account managers, no waiting.</p></div>
     </div>
   </div>
 </section>
@@ -403,15 +452,15 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 <!-- R&D -->
 <section class="rnd" aria-label="AI and automation projects in progress">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="kicker">In development</span>
       <h2>AI &amp; automation initiatives</h2>
     </div>
     <div class="rnd-grid">
-      <div class="rnd-card"><span class="rnd-label">In progress</span><h3>AI Business Assistant</h3><p>An AI-powered assistant to automate workflows, manage tasks, and boost productivity.</p></div>
-      <div class="rnd-card"><span class="rnd-label">In progress</span><h3>Local Business Transformation</h3><p>Full digital ecosystems — websites, ordering systems, WhatsApp funnels — for local businesses.</p></div>
-      <div class="rnd-card"><span class="rnd-label">In progress</span><h3>Smart Deployment Workflow</h3><p>Scalable GitHub and Vercel pipelines for seamless, one-click publishing.</p></div>
-      <div class="rnd-card"><span class="rnd-label">In progress</span><h3>AI Productivity Systems</h3><p>Intelligent workflows combining AI tools with automation to cut manual work significantly.</p></div>
+      <div class="rnd-card reveal"><span class="rnd-label">In progress</span><h3>AI Business Assistant</h3><p>An AI-powered assistant to automate workflows, manage tasks, and boost productivity.</p></div>
+      <div class="rnd-card reveal"><span class="rnd-label">In progress</span><h3>Local Business Transformation</h3><p>Full digital ecosystems — websites, ordering systems, WhatsApp funnels — for local businesses.</p></div>
+      <div class="rnd-card reveal"><span class="rnd-label">In progress</span><h3>Smart Deployment Workflow</h3><p>Scalable GitHub and Vercel pipelines for seamless, one-click publishing.</p></div>
+      <div class="rnd-card reveal"><span class="rnd-label">In progress</span><h3>AI Productivity Systems</h3><p>Intelligent workflows combining AI tools with automation to cut manual work significantly.</p></div>
     </div>
   </div>
 </section>
@@ -419,22 +468,17 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 <!-- PROCESS -->
 <section class="process" id="process">
   <div class="container">
-    <div class="section-head center">
+    <div class="section-head center reveal">
       <span class="kicker">How I work</span>
-      <h2 style="color:#fff">From first message to live website</h2>
-      <p>A clear, fixed process — you always know what happens next, and when.</p>
+      <h2>From first message to live website</h2>
+      <p>A clear, fixed five-step process — you always know what happens next, and when.</p>
     </div>
     <div class="steps">
-      <div class="step"><span class="num">01</span><h3>Discover</h3><p>We talk on WhatsApp or a call. I understand your business, your customers, and what the site needs to achieve.</p><span class="when">Day 1</span></div>
-      <div class="step"><span class="num">02</span><h3>Design &amp; build</h3><p>I design and build a mobile-first site around your brand — you see progress links, not surprises.</p><span class="when">Days 2–5</span></div>
-      <div class="step"><span class="num">03</span><h3>Review &amp; refine</h3><p>You review the live preview. Revisions included — we adjust until it feels right for your business.</p><span class="when">Days 5–7</span></div>
-      <div class="step"><span class="num">04</span><h3>Launch &amp; automate</h3><p>Site goes live with lead capture, WhatsApp funnel and SEO basics wired in. I stay available after launch.</p><span class="when">Week 1</span></div>
-    </div>
-    <div class="assure">
-      <div><strong>⚡ Reply within 24 hours</strong>Every enquiry gets a personal reply — usually much faster on WhatsApp.</div>
-      <div><strong>📱 Mobile-first, always</strong>Most of your customers are on phones. Every build starts there.</div>
-      <div><strong>🔍 You see it live, early</strong>Preview links from day one — no waiting weeks in the dark.</div>
-      <div><strong>🤝 Support after launch</strong>Launch is the start, not the end. I remain one message away.</div>
+      <div class="step reveal"><span class="num">01</span><h3>Discovery</h3><p>We talk on WhatsApp or a call. I understand your business, your customers, and what the site must achieve.</p></div>
+      <div class="step reveal"><span class="num">02</span><h3>Design</h3><p>I design a mobile-first layout around your brand and your customers' journey — you approve before build.</p></div>
+      <div class="step reveal"><span class="num">03</span><h3>Development</h3><p>Clean, fast code with lead capture, WhatsApp funnel and SEO wired in. Progress links, not surprises.</p></div>
+      <div class="step reveal"><span class="num">04</span><h3>Testing</h3><p>Every page checked on real phones and browsers — speed, forms, links and booking flows all verified.</p></div>
+      <div class="step reveal"><span class="num">05</span><h3>Launch</h3><p>Site goes live with analytics and SEO basics in place. Revisions included, support continues after launch.</p></div>
     </div>
   </div>
 </section>
@@ -442,14 +486,14 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <div class="section-head center">
+    <div class="section-head center reveal">
       <span class="kicker">Let's work together</span>
-      <h2>Ready to build something great?</h2>
-      <p>Tell me about your project — the form opens a WhatsApp chat with me directly, details pre-filled. No middleman, no waiting.</p>
+      <h2>Ready to get more customers from your website?</h2>
+      <p>Tell me about your business — the form opens a WhatsApp chat with me directly, details pre-filled. No middleman, no waiting.</p>
     </div>
     <div class="contact-grid">
-      <form class="form-card" id="waForm" novalidate>
-        <h3>Start your project</h3>
+      <form class="form-card reveal" id="waForm" novalidate>
+        <h3>Book your free consultation</h3>
         <p>Fill this in and hit send — it opens WhatsApp with your message ready to go.</p>
         <div class="field">
           <label for="fName">Your name</label>
@@ -465,8 +509,10 @@ footer .brand-mark{background:#fff;color:var(--navy)}
             <option value="">Select a service…</option>
             <option>New website</option>
             <option>Website redesign</option>
-            <option>WhatsApp / lead automation</option>
-            <option>AI integration (chatbot, workflows)</option>
+            <option>Landing page</option>
+            <option>SEO optimization</option>
+            <option>Website maintenance</option>
+            <option>WhatsApp / AI automation</option>
             <option>Full digital setup (site + automation)</option>
             <option>Something else</option>
           </select>
@@ -478,8 +524,8 @@ footer .brand-mark{background:#fff;color:var(--navy)}
         <button type="submit" class="btn btn-primary" style="width:100%">Send via WhatsApp →</button>
         <p class="form-note">Opens WhatsApp — nothing is stored anywhere else. Replies within 24 hours.</p>
       </form>
-      <div class="channels" aria-label="Direct contact channels">
-        <a class="channel" href="https://wa.me/918949498980?text=Hi%20Piyush%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." rel="noopener">
+      <div class="channels reveal" aria-label="Direct contact channels">
+        <a class="channel" href="https://wa.me/918949498980?text=Hi%20Piyush%2C%20I%27d%20like%20to%20book%20a%20free%20consultation%20for%20my%20business%20website." rel="noopener">
           <span class="ico" aria-hidden="true">💬</span><span><b>WhatsApp</b><span>+91 89494 98980 — fastest reply</span></span>
         </a>
         <a class="channel" href="mailto:pareekpiyush97@gmail.com">
@@ -501,16 +547,57 @@ footer .brand-mark{background:#fff;color:var(--navy)}
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <div class="container foot-grid">
-    <a class="brand" href="#top" style="text-decoration:none">
-      <span class="brand-mark" aria-hidden="true">PP</span>
-      <span style="color:#fff;font-weight:600">Piyush Pareek</span>
-    </a>
-    <span>© 2026 Piyush Pareek · AI &amp; Automation Developer</span>
-    <nav aria-label="Footer">
-      <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#process">Process</a><a href="#contact">Contact</a>
-    </nav>
+  <div class="container">
+    <div class="foot-cols">
+      <div class="foot-about">
+        <a class="brand" href="#top" style="text-decoration:none">
+          <span class="brand-mark" aria-hidden="true">PP</span>
+          <span style="color:#fff;font-weight:600">Piyush Pareek</span>
+        </a>
+        <p>Premium websites, SEO and WhatsApp automation for India's next brands — from Bikaner to the world.</p>
+        <div class="foot-social">
+          <a href="https://wa.me/918949498980" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="https://www.linkedin.com/in/piyush-pareek49" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://github.com/pareekpiyush97" rel="noopener" aria-label="GitHub">&lt;/&gt;</a>
+          <a href="https://x.com/pareekpiyush97" rel="noopener" aria-label="Twitter X">𝕏</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#why">Why Me</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Website Design</a></li>
+          <li><a href="#services">Website Redesign</a></li>
+          <li><a href="#services">Landing Pages</a></li>
+          <li><a href="#services">SEO Optimization</a></li>
+          <li><a href="#services">Maintenance &amp; Automation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/918949498980" rel="noopener">+91 89494 98980</a></li>
+          <li><a href="mailto:pareekpiyush97@gmail.com">pareekpiyush97@gmail.com</a></li>
+          <li>Bikaner, Rajasthan, India</li>
+          <li>Replies within 24 hours</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Piyush Pareek · Web Design &amp; Automation</span>
+      <a href="#top" style="color:#B9C6DC;text-decoration:none">Back to top ↑</a>
+    </div>
   </div>
 </footer>
 
@@ -522,6 +609,12 @@ toggle.addEventListener('click',()=>{
   toggle.setAttribute('aria-expanded',open);
 });
 links.addEventListener('click',e=>{if(e.target.tagName==='A'){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
+
+// Scroll reveal (respects prefers-reduced-motion via CSS)
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // WhatsApp form → prefilled chat
 document.getElementById('waForm').addEventListener('submit',e=>{
@@ -538,4 +631,3 @@ document.getElementById('waForm').addEventListener('submit',e=>{
 </script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
